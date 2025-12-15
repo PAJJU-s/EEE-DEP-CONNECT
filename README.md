@@ -1,5 +1,7 @@
 # EEE Department Website - Tontadarya College of Engineering
 
+![CI](https://github.com/PAJJU-s/EEE-DEP-CONNECT/actions/workflows/ci.yml/badge.svg)
+
 A modern, feature-rich website for the Electrical and Electronics Engineering (EEE) Department at Tontadarya College of Engineering, Gadag.
 
 ## Features
@@ -169,11 +171,12 @@ This project is created for Tontadarya College of Engineering, Gadag - EEE Depar
 
 ## Notes
 
-- This is a demo application with sample data
-- File downloads are simulated (alerts shown instead of actual downloads)
-- In production, you would need to:
-  - Connect to a backend API for data
-  - Implement actual file storage and download
-  - Add authentication for admin features
-  - Set up database for dynamic content
+- This is a demo application with sample data.
+- Backend removed: this workspace currently contains frontend-only code. Server implementation and related backend files were removed from the repository.
+- File downloads are simulated (alerts shown instead of actual downloads).
+- For a production deployment you would typically:
+  - Connect to a backend API for data and metadata
+  - Implement secure file storage and download (or use a managed storage provider)
+  - Add authentication and authorization for admin features
+  - Set up a persistent database for dynamic content
 
