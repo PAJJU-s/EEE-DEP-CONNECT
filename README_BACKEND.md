@@ -26,19 +26,8 @@ The backend server will run on `http://localhost:3001`
 
 ## API Endpoints
 
-### Students API
-- `GET /api/students` - Get all students
-- `GET /api/students/:id` - Get student by ID
-- `POST /api/students` - Create new student
-- `PUT /api/students/:id` - Update student
-- `DELETE /api/students/:id` - Delete student
 - `POST /api/init/students` - Initialize students with default data
 
-### Files API
-- `GET /api/files` - Get all files
-- `GET /api/files/type/:type` - Get files by type (pyq, notes, papers)
-- `POST /api/files/upload` - Upload a PDF file
-- `GET /api/files/:id/download` - Download a file
 - `DELETE /api/files/:id` - Delete a file
 
 ## File Structure
@@ -58,12 +47,6 @@ server/
 
 ## File Upload
 
-Files are uploaded using `multipart/form-data` with the following fields:
-- `file`: The PDF file
-- `type`: File type ('pyq', 'notes', or 'papers')
-- `subject`: Subject name (optional)
-- `semester`: Semester number (optional)
-- `scheme`: Scheme year (optional)
 - `year`: Year (optional)
 
 ## Frontend Configuration
@@ -77,10 +60,5 @@ const API_BASE_URL = 'http://localhost:3001/api';
 If your backend runs on a different port, update this URL accordingly.
 
 ## Notes
-
-- Files are stored in the `uploads/` directory
-- Data is stored in JSON files in the `data/` directory
-- Maximum file size: 10MB
-- Only PDF files are accepted
-- The server automatically creates necessary directories on startup
+- `subject`: Subject name (optional)
 

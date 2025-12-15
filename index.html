@@ -9,6 +9,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // file is a File from <input type="file">
+      const res = await fetch('/api/files/signed-upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: file.name, type: 'notes', expires: 120 })
+      });
+      const { uploadUrl } = await res.json();
+      await fetch(uploadUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': file.type || 'application/pdf' },
+        body: file
+      });
+    </script>
   </body>
 </html>
 
